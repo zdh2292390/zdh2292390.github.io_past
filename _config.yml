@@ -1,0 +1,31 @@
+name: 北冥有鱼
+author: 北冥有鱼
+baseurl: ""
+description: Mind change world
+github: http://www.github.com/zdh2292390
+# twitter: http://www.twitter.com/
+# facebook: http://www.facebook.com
+# linkedin: http://www.linkedin.com
+email: ustbdenghui@126.com
+location: 北京 海淀
+# disqus: diqus-username
+
+##Make sure to edit the above fields, especially for disqus.
+
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables"]
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
