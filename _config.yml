@@ -14,7 +14,7 @@ location: 北京 海淀
 
 
 highlighter: pygments
-markdown: redcarpet
+# markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
 
