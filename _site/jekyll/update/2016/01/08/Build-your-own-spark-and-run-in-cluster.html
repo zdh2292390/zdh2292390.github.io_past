@@ -67,22 +67,24 @@
     </small>
   </p> <hr/>
   <div class="post">
-    <p>1.下载CDH版本的spark</p>
+    <h3 id="1下载cdh版本的spark">1.下载CDH版本的spark</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>https://github.com/cloudera/spark/tree/cdh5-1.6.0_5.7.0
 </code></pre>
 </div>
 
-<p>2.二次修改后用maven打包编译</p>
+<h3 id="2二次修改后用maven打包编译">2.二次修改后用maven打包编译</h3>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">export</span> <span class="no">MAVEN_OPTS</span><span class="o">=</span><span class="s2">"-Xmx2g -XX:ReservedCodeCacheSize=512m -XX:MaxPermSize=512M"</span>
 
 <span class="p">.</span><span class="nf">/</span><span class="n">build</span><span class="o">/</span><span class="n">mvn</span> <span class="o">-</span><span class="no">Pyarn</span> <span class="o">-</span><span class="no">Phadoop</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">6</span> <span class="o">-</span><span class="no">Dhadoop</span><span class="p">.</span><span class="nf">version</span><span class="o">=</span><span class="mi">2</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cdh5</span><span class="o">.</span><span class="mi">7</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="no">DskipTests</span> <span class="n">clean</span> <span class="n">package</span></code></pre></figure>
 
-<p>3.修改spark-default.conf文件
-    修改spark-default.conf文件的  spark.yarn.jar属性为 自己开发的spark包，就可以在集群上跑自己二次开发的spark（Mllib  GraphX等）</p>
+<h3 id="3修改spark-defaultconf文件">3.修改spark-default.conf文件</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>修改spark-default.conf文件的  spark.yarn.jar属性为 自己开发的spark包，就可以在集群上跑自己二次开发的spark（Mllib  GraphX等）
+</code></pre>
+</div>
 
-<p>4.spark-submit时 必须需要设置deploy-mode 为cluster</p>
+<h3 id="4spark-submit时-必须需要设置deploy-mode-为cluster">4.spark-submit时 必须需要设置deploy-mode 为cluster</h3>
 
 
   </div>
@@ -127,7 +129,7 @@
     <p class="text-muted credit">
       &copy; 2017 北冥有鱼 &middot;
       <a href="http://www.github.com/zdh2292390"> 张登辉 </a>
-      2017-01-07 11:05:56 +0800
+      2017-01-07 11:19:30 +0800
     </p>
   </footer>
 </div>
