@@ -69,14 +69,15 @@
   <div class="post">
     <p>1.下载CDH版本的spark</p>
 
-<pre><code>https://github.com/cloudera/spark/tree/cdh5-1.6.0_5.7.0
+<div class="highlighter-rouge"><pre class="highlight"><code>https://github.com/cloudera/spark/tree/cdh5-1.6.0_5.7.0
 </code></pre>
+</div>
 
 <p>2.二次修改后用maven打包编译</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">export</span> <span class="no">MAVEN_OPTS</span><span class="o">=</span><span class="s2">&quot;-Xmx2g -XX:ReservedCodeCacheSize=512m -XX:MaxPermSize=512M&quot;</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">export</span> <span class="no">MAVEN_OPTS</span><span class="o">=</span><span class="s2">"-Xmx2g -XX:ReservedCodeCacheSize=512m -XX:MaxPermSize=512M"</span>
 
-<span class="o">.</span><span class="n n-Operator">/</span><span class="n">build</span><span class="o">/</span><span class="n">mvn</span> <span class="o">-</span><span class="no">Pyarn</span> <span class="o">-</span><span class="no">Phadoop</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">6</span> <span class="o">-</span><span class="no">Dhadoop</span><span class="o">.</span><span class="n">version</span><span class="o">=</span><span class="mi">2</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cdh5</span><span class="o">.</span><span class="mi">7</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="no">DskipTests</span> <span class="n">clean</span> <span class="n">package</span></code></pre></figure>
+<span class="p">.</span><span class="nf">/</span><span class="n">build</span><span class="o">/</span><span class="n">mvn</span> <span class="o">-</span><span class="no">Pyarn</span> <span class="o">-</span><span class="no">Phadoop</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">6</span> <span class="o">-</span><span class="no">Dhadoop</span><span class="p">.</span><span class="nf">version</span><span class="o">=</span><span class="mi">2</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cdh5</span><span class="o">.</span><span class="mi">7</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="no">DskipTests</span> <span class="n">clean</span> <span class="n">package</span></code></pre></figure>
 
 <p>3.修改spark-default.conf文件
     修改spark-default.conf文件的  spark.yarn.jar属性为 自己开发的spark包，就可以在集群上跑自己二次开发的spark（Mllib  GraphX等）</p>
@@ -126,7 +127,7 @@
     <p class="text-muted credit">
       &copy; 2017 北冥有鱼 &middot;
       <a href="https://github.com/arnp/herring-cove"> Herring Cove for Jekyll </a>
-      2017-01-07 10:44:07 +0800
+      2017-01-07 10:50:52 +0800
     </p>
   </footer>
 </div>
