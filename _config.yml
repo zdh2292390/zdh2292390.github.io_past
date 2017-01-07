@@ -13,7 +13,7 @@ location: 北京 海淀
 ##Make sure to edit the above fields, especially for disqus.
 
 
-highlighter: pygments
+highlighter: rouge
 # markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
